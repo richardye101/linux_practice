@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+
+function range {
+	local rng=$([[ $1 \lt 0 ]] echo {$1..0} || echo {0..$1})
+	for i in $rng
+	do
+		echo $i
+	done
+}
+
+function extremes {
+	local max=$([[ $1 -gt $2 ]] && echo $1 || echo $2)
+	local min=$([[ $1 -lt $2 ]] && echo $1 || echo $2)
+	for i in $@
+	do
+		if [[ $i -ge $max ]]
+		then
+			let max=$i
+		elif [[ $i -le $min ]]
+		then
+			let min=$i
+		fi
+	done
+	echo $min $max
+}

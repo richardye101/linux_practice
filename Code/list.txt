@@ -1,0 +1,17 @@
+Applications
+Default.json
+Desktop
+Documents
+Downloads
+Library
+Movies
+Music
+MuteSpotifyAds
+Pictures
+Public
+VirtualBox VMs
+backups.txt
+minikube-darwin-amd64
+stats.txt
+webserver-svc.yaml
+webserver.yaml
